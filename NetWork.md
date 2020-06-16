@@ -18,16 +18,16 @@
 > 每个学生公寓设置一台核心交换机（第二层交换机），每楼层设置两台交换机（第三层交换机），网络主干线从网络管理中心拉出，分别到达每个学生公寓的核心交换机，每楼层的交换机直接和本楼的核心交换机相连，满足基本的建网需要。  
 
 > 4栋楼每栋7层，每层三十个房间，共840个房间
-![text](https://github.com/wxt6996/Student-apartment-net-design/blob/master/1.jpg)
+![若不显示请点击](http://m.qpic.cn/psc?/V12gAyi52qwtQP/FuOlPseFkXy6zf1*h9xoNjZ6R29vd00e0jP6xLJ62tLhlES5N.vVcpG9vGBL5iMyd8JgLna5IUEjIxNkZRDihgv2Vgu00PM8obbWeib2yPw!/b&bo=IAN5AgAAAAARF3g!&rf=viewer_4)
 ## 网络拓扑结构设计
 > 1.四栋学生公寓连接外部网络都要经过网络管理中心，至少需要5口的交换机连接。我们选用两个16口的100/1000MB的自适应交换机，每台交换机还剩下11口以便于日后的拓展使用  
 > 这样布线目的就是避免第一级交换机一旦出现问题无法继续工作，同级的另一个第一级交换机可以确保网络不致中断，可以使整个网络继续正常运转。所以这样用两台第一级交换机布线比只用一台第一级交换机更具有可靠性和稳定性，并且也相应的减小了第一级交换机工作的负担，能够充分利用网络资源。使整个网络发挥它的最大功效。  
-![](C:\Users\Administrator\Desktop\3.png)
+![若不显示请点击](http://m.qpic.cn/psc?/V12gAyi52qwtQP/FuOlPseFkXy6zf1*h9xoNuPfjypFnEP5*YL559rXsyJi7Grv1Oq453KQkvRo6KLNUn7eAh3GFi0EFZKv8O2RXASSEy6z7LPfVjdvDhtNOrQ!/b&bo=bAMtAgAAAAADF3I!&rf=viewer_4)
 > 2.每栋楼的有7层，利用一个8口10/100MB的自适应交换机（第二级交换机）就能够满足本楼的需求。楼内各层有30个房间，也就需要至少30个接入点，所以每层一个交换机不够，需要两个第三层交换机  
 > 3.四栋楼的结构都如2所述。  
-![](C:\Users\Administrator\Desktop\4.jpg)
+![](http://m.qpic.cn/psc?/V12gAyi52qwtQP/FuOlPseFkXy6zf1*h9xoNnHVEvf5.X3NzQ.*ByvFAfmzGGlcxY9hM3JYIntCeAzhKEBRxsIfL*gIgNwPwt67Ss9Y9Tuq03ZYOW0N7cyKKcw!/b&bo=9AO1AgAAAAADJ0I!&rf=viewer_4)
 > 4.在每一栋学生公寓里每个楼层内按30个宿舍算起，因此我们每层用 2 个16口的10/100MB自适应交换机就能满足现在的需求，但为了方便以后网络的拓展应用，提高网络的可扩展行，我们选用一个16口的10/100MB的自适应交换机和一个24口的10/100MB的自适应交换机进行网络的连接拓展，这样就总共有38个口可以利用，现在需要用到30个，余下8口方便以后的拓展。这样，一栋楼就余下了48个口方便其他使用  
-![](C:\Users\Administrator\Desktop\5.jpg)
+![若不显示请点击](http://m.qpic.cn/psc?/V12gAyi52qwtQP/FuOlPseFkXy6zf1*h9xoNr5Tu*SgtWo6N*uWKo*sB.Bnz4qJrxnH0120CKR1y5AfY0typDKQ.qkbY8F70UaXTz3zVo.swiMEvwIniOGzFQA!/b&bo=tQKHAQAAAAADFwM!&rf=viewer_4)
 ## 设备选型
 > 交换机的选择
 >> 第一级交换机：网络拓扑中第一级交换机选用锐捷网络自主研发的万兆核心交换机RG-S6806。  第二级交换机：在楼栋接入的第二级交换机我们选用锐捷网络的STAR-S3550系列三层交换机。  第三级交换机：第三极交换机我们选用锐捷网络的支持802.1x的千兆智能交换机RG-S2126G/2150G.  
